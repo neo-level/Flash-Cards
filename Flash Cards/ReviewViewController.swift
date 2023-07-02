@@ -19,13 +19,13 @@ class ReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        startReview()
     }
     
     /**
      Begins with the review process.
      */
-    @IBAction func startReview(_ sender: UIButton) {
+    func startReview() {
         currentFlashCard = DataManager.shared.getRandomFlashCard()
         guard let flashcard = currentFlashCard else { return }
         
@@ -47,14 +47,14 @@ class ReviewViewController: UIViewController {
         guard let flashcard = currentFlashCard else { return }
         
         DataManager.shared.updateFlashCardMastery(flashcard, wasCorrect: true)
-        startReview(sender)
+        startReview()
     }
     
     @IBAction func answerWasWrong(_ sender: UIButton ) {
         guard let flashcard = currentFlashCard else { return }
         
         DataManager.shared.updateFlashCardMastery(flashcard, wasCorrect: false)
-        startReview(sender)
+        startReview()
     }
     
 }
