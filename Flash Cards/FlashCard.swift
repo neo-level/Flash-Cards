@@ -12,9 +12,9 @@ class FlashCard {
     var answer: String
     var masteryLevel: Int
     
-    init(word: String, answer: String, masteryLevel: Int) {
+    init(word: String, answer: String) {
         self.word = word
         self.answer = answer
-        self.masteryLevel = masteryLevel
+        self.masteryLevel = 0
     }
 }
