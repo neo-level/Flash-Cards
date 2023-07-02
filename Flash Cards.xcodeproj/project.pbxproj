@@ -17,6 +17,7 @@
 		706168A02A5172FF00D01C51 /* FlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7061689F2A5172FF00D01C51 /* FlashCardViewController.swift */; };
 		706168A22A51730E00D01C51 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706168A12A51730E00D01C51 /* ReviewViewController.swift */; };
 		706168A42A5179C700D01C51 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706168A32A5179C700D01C51 /* FlashCard.swift */; };
+		706168A62A517A3000D01C51 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706168A52A517A3000D01C51 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7061689F2A5172FF00D01C51 /* FlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardViewController.swift; sourceTree = "<group>"; };
 		706168A12A51730E00D01C51 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		706168A32A5179C700D01C51 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
+		706168A52A517A3000D01C51 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				7061688A2A516F9E00D01C51 /* ViewController.swift */,
 				7061688C2A516F9E00D01C51 /* Main.storyboard */,
 				706168A32A5179C700D01C51 /* FlashCard.swift */,
+				706168A52A517A3000D01C51 /* DataManager.swift */,
 				7061689F2A5172FF00D01C51 /* FlashCardViewController.swift */,
 				706168A12A51730E00D01C51 /* ReviewViewController.swift */,
 				706168922A516F9F00D01C51 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7061688B2A516F9E00D01C51 /* ViewController.swift in Sources */,
+				706168A62A517A3000D01C51 /* DataManager.swift in Sources */,
 				706168872A516F9E00D01C51 /* AppDelegate.swift in Sources */,
 				706168A22A51730E00D01C51 /* ReviewViewController.swift in Sources */,
 				706168912A516F9E00D01C51 /* Flash_Cards.xcdatamodeld in Sources */,
