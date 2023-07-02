@@ -19,7 +19,8 @@ class FlashCardViewController: UIViewController {
     }
     
     /**
-     Creates a flash card when the submit button is clicked.
+    Creates a flash card when the submit button is clicked. stores it into the datamanager array.
+    - Returns : nothing when the text values aren't filled in.
      */
     @IBAction func createFlashCard(_ sender: UIButton) {
         guard let word = wordTextField.text, !word.isEmpty,
