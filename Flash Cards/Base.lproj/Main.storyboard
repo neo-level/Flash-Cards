@@ -68,12 +68,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <connections>
+                                    <action selector="createFlashCard:" destination="fsh-pS-550" eventType="touchUpInside" id="w3g-fQ-HCU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JQ0-t7-00L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6wu-uc-YGi"/>
+                    <connections>
+                        <outlet property="answerTextField" destination="jVi-UJ-SrO" id="dAq-jq-8Se"/>
+                        <outlet property="submitButton" destination="8oh-HI-hlO" id="Xmc-ZU-a2s"/>
+                        <outlet property="wordTextField" destination="1sG-2E-0Sb" id="lOa-6y-Wcu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edX-Nw-Itw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,6 +109,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Correct">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="answerWasCorrect:" destination="8hY-bf-GJp" eventType="touchUpInside" id="O2G-LY-vO1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch0-gK-bUj">
                                 <rect key="frame" x="202" y="586" width="154" height="93"/>
@@ -109,18 +120,30 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Wrong">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="answerWasWrong:" destination="8hY-bf-GJp" eventType="touchUpInside" id="WKy-1M-SEh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-EO-bSZ">
                                 <rect key="frame" x="134" y="469" width="124" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="answer"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="8hY-bf-GJp" eventType="touchUpInside" id="sIR-ZM-tWj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gRy-EK-Y3y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="OIr-zZ-MYr"/>
+                    <connections>
+                        <outlet property="cardLabel" destination="Bb1-RA-PGb" id="9mM-wE-1lf"/>
+                        <outlet property="correctButton" destination="Lp9-Ds-WYb" id="K4A-uL-aBo"/>
+                        <outlet property="flipButton" destination="uYr-EO-bSZ" id="Zob-eW-EBa"/>
+                        <outlet property="wrongflipButton" destination="Ch0-gK-bUj" id="5Sg-Xb-sZA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8d-wM-7aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
