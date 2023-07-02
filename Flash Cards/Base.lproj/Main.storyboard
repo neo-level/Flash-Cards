@@ -110,6 +110,12 @@
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-EO-bSZ">
+                                <rect key="frame" x="134" y="469" width="124" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="answer"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gRy-EK-Y3y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
