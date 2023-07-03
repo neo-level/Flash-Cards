@@ -6,15 +6,10 @@
 //
 
 import Foundation
+import CoreData
 
-class FlashCard {
-    var word: String
-    var answer: String
-    var masteryLevel: Int
-    
-    init(word: String, answer: String) {
-        self.word = word
-        self.answer = answer
-        self.masteryLevel = 0
-    }
+public class FlashCard: NSManagedObject {
+    @NSManaged public var word: String?
+    @NSManaged public var answer: String?
+    @NSManaged public var masteryLevel: Int16
 }

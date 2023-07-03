@@ -6,21 +6,42 @@
 //
 
 import Foundation
+import CoreData
+import UIKit
 
 
 class DataManager {
     static let shared = DataManager()
     private init() {}
     
-    var flashcards: [FlashCard] = []
+    private var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private var context: NSManagedObjectContext {
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    private var flashcards: [FlashCard] {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FlashCard")
+        do {
+            let result = try context.fetch(fetchRequest) as? [FlashCard]
+            return result ?? []
+        } catch {
+            print("failed to fetch flashcards: \(error)")
+            return[]
+        }
+    }
     
     /**
      Adds a flashcard to the flashcards array.
      - parameters
-        - flashcard: The flascard to be added to the collection of flashcards.
+     - word: the word on the flashcard.
+     - answer: the answer for the word.
      */
-    func addFlashCard(_ flashcard: FlashCard) {
-        flashcards.append(flashcard)
+    func addFlashCard(word: String, answer: String) {
+        let flashcard = FlashCard(context: context)
+        flashcard.word = word
+        flashcard.answer = answer
+        flashcard.masteryLevel = 0
+        appDelegate.saveContext()
     }
     
     

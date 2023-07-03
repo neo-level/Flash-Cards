@@ -26,8 +26,7 @@ class FlashCardViewController: UIViewController {
         guard let word = wordTextField.text, !word.isEmpty,
               let answer = answerTextField.text, !answer.isEmpty else { return }
         
-        let flashcard = FlashCard(word: word, answer: answer)
-        DataManager.shared.addFlashCard(flashcard)
+        DataManager.shared.addFlashCard(word: word, answer: answer)
         
         wordTextField.text = ""
         answerTextField.text = ""
